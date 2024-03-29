@@ -3,24 +3,66 @@ const router = express.Router();
 const blogs = [
   {
     id: 1,
-    title: "Apple Watch series 8",
-    description: "Apple",
+    title: "นายอน (Nayeon) ชาวเกาหลี",
+    description: "อิม นายอน  (Im Nayeon) ",
     cover:
-      "https://www.flashfly.net/wp/wp-content/uploads/2022/05/FTX1B5hWIAA6GRr-2-800x600.jpeg",
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/9376de90-0940-11eb-b35d-299eb29d6529_original.jpg",
   },
   {
     id: 2,
-    title: "Iphone 14 PRO",
-    description: "Apple",
+    title: "จองยอน (Jeongyeon) ชาวเกาหลี",
+    description: "ยู จองยอน (Yoo Jeong-yeon)",
     cover:
-      "https://promotions.co.th/wp-content/uploads/2022/09/iphone14-pro-max.jpg",
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/921b4630-0940-11eb-b35d-299eb29d6529_original.jpg",
   },
   {
     id: 3,
-    title: "Twice",
-    description: "Korea",
+    title: "โมโมะ (Momo) ชาวญี่ปุ่น",
+    description: "ฮิราอิ โมโมะ (Hirai Momo)",
     cover:
-      "https://www.hallyukstar.com/wp-content/uploads/2023/03/twice-readytobe.webp",
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/92fd1ab0-0940-11eb-8d0b-db22203d57e6_original.jpg",
+  },
+  {
+    id: 4,
+    title: "ซานะ (Sana) ชาวญี่ปุ่น",
+    description: "มินาโตซากิ ซานะ (Minatozaki Sana)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/939cdd20-0940-11eb-8d0b-db22203d57e6_original.jpg",
+  },
+  {
+    id: 5,
+    title: "จีฮโย (Jihyo) ชาวเกาหลี",
+    description: "พัค จีฮโย (Park Ji hyo)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/928133f0-0940-11eb-a3b0-f9d575a2517d_original.jpg",
+  },
+  {
+    id: 6,
+    title: "มินะ (Mina) ชาวญี่ปุ่น",
+    description: "เมียวอิ มินะ (Myoui Mina)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/92aa66d0-0940-11eb-8c17-5bb542a40882_original.jpg",
+  },
+  {
+    id: 7,
+    title: "ดาฮยอน (Dahyun) ชาวเกาหลี",
+    description: "คิม ดาฮยอน (Kim Dahyun)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/91fe4850-0940-11eb-b35d-299eb29d6529_original.jpg",
+  },
+  {
+    id: 8,
+    title: "แชยอง (Chaeyoung) ชาวเกาหลี",
+    description: "ซน แชยอง (Son Chae Young)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/91891850-0940-11eb-a3b0-f9d575a2517d_original.jpg",
+  },
+  {
+    id: 9,
+    title: "จื่อวี (Tzuyu) ชาวไต้หวัน",
+    description: "โจว จื่อวี่ (Chou Tzu Yu)",
+    cover:
+      "https://cms.dmpcdn.com/musicarticle/2020/10/08/93f00630-0940-11eb-a3b0-f9d575a2517d_original.jpg",
   },
 ];
 
