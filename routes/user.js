@@ -80,7 +80,7 @@ router.post("/user/login", function (req, res) {
 router.get("/user/:id", (req, res) => {
   const { id } = req.params;
   const result = users.find((rs) => rs.id === parseInt(id));
-  console.log(id);
+  // console.log(id);
   res.json(result);
 });
 
