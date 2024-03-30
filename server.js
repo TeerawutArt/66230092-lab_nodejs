@@ -13,7 +13,7 @@ const options = {
     info: {
       title: '66230092 Teerawut Kabkaew API',
       version: '1.0.0',
-      description: 'เปลี่ยน description เป็นอะไรก็ได้',
+      description: 'เปลี่ยน description เป็นอะไรก็ได้ๆๆ',
     },
   },
   apis: ['./routes/*.js'],
