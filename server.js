@@ -13,7 +13,7 @@ const options = {
     info: {
       title: '66230092 Teerawut Kabkaew API',
       version: '1.0.0',
-      description: 'WE DPU Student API  Lab',
+      description: 'เปลี่ยน description เป็นอะไรก็ได้',
     },
   },
   apis: ['./routes/*.js'],
