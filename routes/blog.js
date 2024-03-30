@@ -1,68 +1,75 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const blogs = [
   {
     id: 1,
-    title: "นายอน (Nayeon) ชาวเกาหลี",
-    description: "อิม นายอน  (Im Nayeon) ",
+    title: 'นายอน (Nayeon) ชาวเกาหลี',
+    description: 'อิม นายอน  (Im Nayeon) ',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/9376de90-0940-11eb-b35d-299eb29d6529_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/9376de90-0940-11eb-b35d-299eb29d6529_original.jpg',
   },
   {
     id: 2,
-    title: "จองยอน (Jeongyeon) ชาวเกาหลี",
-    description: "ยู จองยอน (Yoo Jeong-yeon)",
+    title: 'จองยอน (Jeongyeon) ชาวเกาหลี',
+    description: 'ยู จองยอน (Yoo Jeong-yeon)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/921b4630-0940-11eb-b35d-299eb29d6529_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/921b4630-0940-11eb-b35d-299eb29d6529_original.jpg',
   },
   {
     id: 3,
-    title: "โมโมะ (Momo) ชาวญี่ปุ่น",
-    description: "ฮิราอิ โมโมะ (Hirai Momo)",
+    title: 'โมโมะ (Momo) ชาวญี่ปุ่น',
+    description: 'ฮิราอิ โมโมะ (Hirai Momo)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/92fd1ab0-0940-11eb-8d0b-db22203d57e6_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/92fd1ab0-0940-11eb-8d0b-db22203d57e6_original.jpg',
   },
   {
     id: 4,
-    title: "ซานะ (Sana) ชาวญี่ปุ่น",
-    description: "มินาโตซากิ ซานะ (Minatozaki Sana)",
+    title: 'ซานะ (Sana) ชาวญี่ปุ่น',
+    description: 'มินาโตซากิ ซานะ (Minatozaki Sana)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/939cdd20-0940-11eb-8d0b-db22203d57e6_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/939cdd20-0940-11eb-8d0b-db22203d57e6_original.jpg',
   },
   {
     id: 5,
-    title: "จีฮโย (Jihyo) ชาวเกาหลี",
-    description: "พัค จีฮโย (Park Ji hyo)",
+    title: 'จีฮโย (Jihyo) ชาวเกาหลี',
+    description: 'พัค จีฮโย (Park Ji hyo)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/928133f0-0940-11eb-a3b0-f9d575a2517d_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/928133f0-0940-11eb-a3b0-f9d575a2517d_original.jpg',
   },
   {
     id: 6,
-    title: "มินะ (Mina) ชาวญี่ปุ่น",
-    description: "เมียวอิ มินะ (Myoui Mina)",
+    title: 'มินะ (Mina) ชาวญี่ปุ่น',
+    description: 'เมียวอิ มินะ (Myoui Mina)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/92aa66d0-0940-11eb-8c17-5bb542a40882_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/92aa66d0-0940-11eb-8c17-5bb542a40882_original.jpg',
   },
   {
     id: 7,
-    title: "ดาฮยอน (Dahyun) ชาวเกาหลี",
-    description: "คิม ดาฮยอน (Kim Dahyun)",
+    title: 'ดาฮยอน (Dahyun) ชาวเกาหลี',
+    description: 'คิม ดาฮยอน (Kim Dahyun)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/91fe4850-0940-11eb-b35d-299eb29d6529_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/91fe4850-0940-11eb-b35d-299eb29d6529_original.jpg',
   },
   {
     id: 8,
-    title: "แชยอง (Chaeyoung) ชาวเกาหลี",
-    description: "ซน แชยอง (Son Chae Young)",
+    title: 'แชยอง (Chaeyoung) ชาวเกาหลี',
+    description: 'ซน แชยอง (Son Chae Young)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/91891850-0940-11eb-a3b0-f9d575a2517d_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/91891850-0940-11eb-a3b0-f9d575a2517d_original.jpg',
   },
   {
     id: 9,
-    title: "จื่อวี (Tzuyu) ชาวไต้หวัน",
-    description: "โจว จื่อวี่ (Chou Tzu Yu)",
+    title: 'จื่อวี (Tzuyu) ชาวไต้หวัน',
+    description: 'โจว จื่อวี่ (Chou Tzu Yu)',
     cover:
-      "https://cms.dmpcdn.com/musicarticle/2020/10/08/93f00630-0940-11eb-a3b0-f9d575a2517d_original.jpg",
+      'https://cms.dmpcdn.com/musicarticle/2020/10/08/93f00630-0940-11eb-a3b0-f9d575a2517d_original.jpg',
+  },
+  {
+    id: 10,
+    title: 'จอร์น ซีน่า (John Cena) ชาวจีนแผ่นดินใหญ่',
+    description: 'Bing Chilling',
+    cover:
+      'https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/07/07/fef3ba07-78ab-4b6f-98bd-c4281caa0fa4_2b7d0fc3.jpg?itok=cGBIcWdn&v=1688725357',
   },
 ];
 
@@ -77,7 +84,7 @@ const blogs = [
  *         description: Success
  *
  */
-router.get("/blog", (req, res) => {
+router.get('/blog', (req, res) => {
   res.json(blogs);
 });
 
@@ -101,7 +108,7 @@ router.get("/blog", (req, res) => {
  *       404:
  *         description: blog not found.
  */
-router.get("/blog/:id", (req, res) => {
+router.get('/blog/:id', (req, res) => {
   const { id } = req.params;
   const result = blogs.find((rs) => rs.id === parseInt(id));
   console.log(id);

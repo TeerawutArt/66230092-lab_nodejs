@@ -1,18 +1,18 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
 const users = [
   {
     id: 1,
-    fullname: "Harry Potter",
+    fullname: 'Teerawut Kabkaew',
     avatar:
-      "https://www.flashfly.net/wp/wp-content/uploads/2022/05/FTX1B5hWIAA6GRr-2-800x600.jpeg",
+      'https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/07/07/fef3ba07-78ab-4b6f-98bd-c4281caa0fa4_2b7d0fc3.jpg?itok=cGBIcWdn&v=1688725357',
   },
   {
     id: 2,
-    fullname: "Jame Gun",
+    fullname: 'Jame Gun',
     avatar:
-      "https://www.flashfly.net/wp/wp-content/uploads/2022/05/FTX1B5hWIAA6GRr-2-800x600.jpeg",
+      'https://www.flashfly.net/wp/wp-content/uploads/2022/05/FTX1B5hWIAA6GRr-2-800x600.jpeg',
   },
 ];
 
@@ -40,20 +40,20 @@ const users = [
  *       401:
  *         description: Unauthorized. Invalid credentials.
  */
-router.post("/user/login", function (req, res) {
+router.post('/user/login', function (req, res) {
   const { username, password } = req.body;
   const id = 1; //รหัส User 1
   // Validate username and password (example: check against database)
-  if (username === "exampleUser" && password === "examplePassword") {
+  if (username === '66230092' && password === '123456') {
     // Authentication successful
     res
       .status(200)
-      .json({ id: id, message: "User authenticated successfully" });
+      .json({ id: id, message: 'User authenticated successfully' });
   } else {
     // Authentication failed
     res
       .status(401)
-      .json({ id: 0, message: "Unauthorized. Invalid credentials." });
+      .json({ id: 0, message: 'Unauthorized. Invalid credentials.' });
   }
 });
 
@@ -77,7 +77,7 @@ router.post("/user/login", function (req, res) {
  *       404:
  *         description: user not found.
  */
-router.get("/user/:id", (req, res) => {
+router.get('/user/:id', (req, res) => {
   const { id } = req.params;
   const result = users.find((rs) => rs.id === parseInt(id));
   // console.log(id);
